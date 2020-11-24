@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:CaritaUAT.Models" xmlns:primitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives" xmlns:input="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             mc:Ignorable="d"
+             x:Class="CaritaUAT.Views.SurveyEditPage">
+
+<!--
+    <ContentPage.BindingContext>
+        <local:SurveyViewModel />
+    </ContentPage.BindingContext>
+-->
+    <ContentPage.Content>
+        <ScrollView Margin="15,5,15,5">
+
+            <StackLayout>
+                <StackLayout x:Name="stackMain"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <input:RadButton x:Name="btnSave" Grid.Column="0" Text="Spara" BorderThickness="2" Clicked="btnSave_Clicked"/>
+                    <input:RadButton x:Name="btnCancel" Grid.Column="1" Text="Avbryt"  BorderThickness="2" Clicked="btnCancel_Clicked"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+
+
+
+</ContentPage>

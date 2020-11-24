@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:input="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             mc:Ignorable="d"
+             x:Class="CaritaUAT.Views.NewPatientPage"
+             x:Name="This"
+             Title="Ny patient">
+
+    <ContentPage.BindingContext>
+        <x:Reference Name="This" />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <ScrollView Margin="15,5,15,5">
+
+            <StackLayout>
+                <StackLayout x:Name="stackMain">
+                    <Label Text="Lägg till ny patient" HorizontalOptions="FillAndExpand" BackgroundColor="#87CEEA" FontSize="21" FontAttributes="Bold"/>
+                    <Label Text="Personnummer" HorizontalOptions="FillAndExpand" FontSize="17.5"/>
+                    <Editor Text="{Binding Patient.PNR, Mode=TwoWay}"/>
+                    <Label Text="Förnamn" HorizontalOptions="FillAndExpand" FontSize="17.5"/>
+                    <Editor Text="{Binding Patient.FirstName, Mode=TwoWay}"/>
+                    <Label Text="Efternamn" HorizontalOptions="FillAndExpand" FontSize="17.5"/>
+                    <Editor Text="{Binding Patient.LastName, Mode=TwoWay}"/>
+                </StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <input:RadButton x:Name="btnSave" Grid.Column="0" Text="Spara" BorderThickness="2" Clicked="btnSave_Clicked"/>
+                    <input:RadButton x:Name="btnCancel" Grid.Column="1" Text="Avbryt"  BorderThickness="2" Clicked="btnCancel_Clicked"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

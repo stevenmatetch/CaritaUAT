@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             mc:Ignorable="d"
+             x:Class="CaritaUAT.Views.AdminPage"
+             Title="Administration">
+
+    <ContentPage.Content>
+
+        <Grid Margin="5,5,5,5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnSyncSend" Text="Skicka" Grid.Row="1" Grid.Column="0" Clicked="btnSyncSend_Clicked"/>
+            <Button x:Name="btnSyncRcvt" Text="Hämta" Grid.Row="2" Grid.Column="0" Clicked="btnSyncRcvt_Clicked"/>
+            <Button x:Name="btnSettings" Text="Inställningar" Grid.Row="3" Grid.Column="0"/>
+            <Label Text="Skicka bedömningar till Carita" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center"/>
+            <Label Text="Hämta bedömningar från Carita" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center"/>
+            <Label Text="Använd knapparna nedan för att synkronisera bedömningar med Carita." Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"/>
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

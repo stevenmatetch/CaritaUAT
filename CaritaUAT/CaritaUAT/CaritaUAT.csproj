@@ -1,0 +1,208 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\checkedbox.png" />
+    <None Remove="Icons\icon.png" />
+    <None Remove="Icons\logo128.png" />
+    <None Remove="Icons\logo361.png" />
+    <None Remove="Icons\logonamn2.png" />
+    <None Remove="Icons\logoprofil.png" />
+    <None Remove="Icons\logo_small.png" />
+    <None Remove="Icons\placeholder.png" />
+    <None Remove="Icons\t0.png" />
+    <None Remove="Icons\t1.png" />
+    <None Remove="Icons\t10.png" />
+    <None Remove="Icons\t11.png" />
+    <None Remove="Icons\t12.png" />
+    <None Remove="Icons\t13.png" />
+    <None Remove="Icons\t14.png" />
+    <None Remove="Icons\t15.png" />
+    <None Remove="Icons\t16.png" />
+    <None Remove="Icons\t17.png" />
+    <None Remove="Icons\t18.png" />
+    <None Remove="Icons\t19.png" />
+    <None Remove="Icons\t2.png" />
+    <None Remove="Icons\t20.png" />
+    <None Remove="Icons\t21.png" />
+    <None Remove="Icons\t22.png" />
+    <None Remove="Icons\t23.png" />
+    <None Remove="Icons\t24.png" />
+    <None Remove="Icons\t25.png" />
+    <None Remove="Icons\t26.png" />
+    <None Remove="Icons\t27.png" />
+    <None Remove="Icons\t28.png" />
+    <None Remove="Icons\t29.png" />
+    <None Remove="Icons\t3.png" />
+    <None Remove="Icons\t30.png" />
+    <None Remove="Icons\t31.png" />
+    <None Remove="Icons\t4.png" />
+    <None Remove="Icons\t5.png" />
+    <None Remove="Icons\t6.png" />
+    <None Remove="Icons\t7.png" />
+    <None Remove="Icons\t8.png" />
+    <None Remove="Icons\t9.png" />
+    <None Remove="Icons\unchecked.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\checkedbox.png" />
+    <EmbeddedResource Include="Icons\icon.png" />
+    <EmbeddedResource Include="Icons\logo128.png" />
+    <EmbeddedResource Include="Icons\logo361.png" />
+    <EmbeddedResource Include="Icons\logonamn2.png" />
+    <EmbeddedResource Include="Icons\logoprofil.png" />
+    <EmbeddedResource Include="Icons\logo_small.png" />
+    <EmbeddedResource Include="Icons\placeholder.png" />
+    <EmbeddedResource Include="Icons\t0.png" />
+    <EmbeddedResource Include="Icons\t1.png" />
+    <EmbeddedResource Include="Icons\t10.png" />
+    <EmbeddedResource Include="Icons\t11.png" />
+    <EmbeddedResource Include="Icons\t12.png" />
+    <EmbeddedResource Include="Icons\t13.png" />
+    <EmbeddedResource Include="Icons\t14.png" />
+    <EmbeddedResource Include="Icons\t15.png" />
+    <EmbeddedResource Include="Icons\t16.png" />
+    <EmbeddedResource Include="Icons\t17.png" />
+    <EmbeddedResource Include="Icons\t18.png" />
+    <EmbeddedResource Include="Icons\t19.png" />
+    <EmbeddedResource Include="Icons\t2.png" />
+    <EmbeddedResource Include="Icons\t20.png" />
+    <EmbeddedResource Include="Icons\t21.png" />
+    <EmbeddedResource Include="Icons\t22.png" />
+    <EmbeddedResource Include="Icons\t23.png" />
+    <EmbeddedResource Include="Icons\t24.png" />
+    <EmbeddedResource Include="Icons\t25.png" />
+    <EmbeddedResource Include="Icons\t26.png" />
+    <EmbeddedResource Include="Icons\t27.png" />
+    <EmbeddedResource Include="Icons\t28.png" />
+    <EmbeddedResource Include="Icons\t29.png" />
+    <EmbeddedResource Include="Icons\t3.png" />
+    <EmbeddedResource Include="Icons\t30.png" />
+    <EmbeddedResource Include="Icons\t31.png" />
+    <EmbeddedResource Include="Icons\t4.png" />
+    <EmbeddedResource Include="Icons\t5.png" />
+    <EmbeddedResource Include="Icons\t6.png" />
+    <EmbeddedResource Include="Icons\t7.png" />
+    <EmbeddedResource Include="Icons\t8.png" />
+    <EmbeddedResource Include="Icons\t9.png" />
+    <EmbeddedResource Include="Icons\unchecked.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="SkiaSharp" Version="2.80.0" />
+    <PackageReference Include="SkiaSharp.Views" Version="2.80.0" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.80.0" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
+    <PackageReference Include="sqlite-net-sqlcipher" Version="1.7.335" />
+    <PackageReference Include="Telerik.UI.for.Xamarin" Version="2020.3.1106.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1080" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Telerik.Documents.Core">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Documents.Fixed">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.Documents.Fixed.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Documents.Flow">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.Documents.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Documents.Flow.FormatProviders.Pdf">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.Documents.Flow.FormatProviders.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Documents.Spreadsheet">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.Documents.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Documents.Spreadsheet.FormatProviders.OpenXml">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Documents.Spreadsheet.FormatProviders.Pdf">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.Documents.Spreadsheet.FormatProviders.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Documents.SpreadsheetStreaming">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Barcode">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.XamarinForms.Barcode.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Chart">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.XamarinForms.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Common">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.XamarinForms.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.ConversationalUI">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.XamarinForms.ConversationalUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.DataControls">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.XamarinForms.DataControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.DataGrid">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.XamarinForms.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.DataVisualization">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.XamarinForms.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.ImageEditor">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.XamarinForms.ImageEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Input">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.XamarinForms.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Map">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.XamarinForms.Map.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.PdfViewer">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.XamarinForms.PdfViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Primitives">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.XamarinForms.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.SkiaSharp">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.XamarinForms.SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Zip">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2020\Binaries\Portable\Telerik.Zip.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\AboutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AdminPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\HealthCardPatientPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\HealthCardsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NewPatientPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SurveyEditPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

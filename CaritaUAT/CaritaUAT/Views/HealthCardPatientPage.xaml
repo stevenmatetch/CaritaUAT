@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls" xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+             mc:Ignorable="d"
+             x:Class="CaritaUAT.Views.HealthCardPatientPage"
+             x:Name="This"
+             Title="Patient">
+
+    <ContentPage.BindingContext>
+        <x:Reference Name="This" />
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Lägg till nytt hälsovårdskort"
+                 Order="Secondary"
+                 Priority="10"
+                 Clicked="AddHealthCard_Clicked"/>
+        <ToolbarItem Text="Lägg till nytt munvårdskort"
+                 Order="Secondary"
+                 Priority="20" 
+                 Clicked="AddMouthCard_Clicked"/>
+        <ToolbarItem Text="Uppdatera"
+                 Order="Secondary"
+                 Priority="30" 
+                 Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+
+        <telerikDataControls:RadListView x:Name="radListViewSurveys"  ItemsSource="{Binding Items}" SelectionMode="Single" ItemTapped="radListViewSurveys_ItemTapped" IsPullToRefreshEnabled="True" RefreshRequested="radListViewSurveys_RefreshRequested">
+                <telerikDataControls:RadListView.GroupDescriptors>
+                <telerikListView:PropertyGroupDescriptor PropertyName="TypDsc"/>
+                </telerikDataControls:RadListView.GroupDescriptors>
+                <telerikDataControls:RadListView.LayoutDefinition>
+                    <telerikListView:ListViewLinearLayout ItemLength="80"/>
+                </telerikDataControls:RadListView.LayoutDefinition>
+                <telerikDataControls:RadListView.ItemTemplate>
+                    <DataTemplate>
+                        <telerikListView:ListViewTemplateCell>
+                            <telerikListView:ListViewTemplateCell.View>
+                                <Grid HeightRequest="30">
+                                    <Grid>
+                                        <Grid.Margin>
+                                            <OnPlatform x:TypeArguments="Thickness">
+                                                <On Platform="Android" Value="16"/>
+                                                <On Platform="iOS" Value="15"/>
+                                                <On Platform="UWP" Value="16"/>
+                                            </OnPlatform>
+                                        </Grid.Margin>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition />
+                                        </Grid.RowDefinitions>
+                                        <Image Grid.Column="0" Grid.RowSpan="2" Source="{Binding ImagePath}" WidthRequest="40">
+                                            <Image.Margin>
+                                                <OnPlatform x:TypeArguments="Thickness">
+                                                    <On Platform="Android" Value="0,0,16,0"/>
+                                                    <On Platform="iOS" Value="0,0,15,0"/>
+                                                    <On Platform="UWP" Value="0,0,16,0"/>
+                                                </OnPlatform>
+                                            </Image.Margin>
+                                        </Image>
+                                        <Label Grid.Column="1" Grid.Row="0" Text="{Binding FriendlyName}">
+                                            <Label.FontSize>
+                                                <OnPlatform x:TypeArguments="x:Double">
+                                                    <On Platform="Android" Value="16"/>
+                                                    <On Platform="iOS" Value="15"/>
+                                                    <On Platform="UWP" Value="15"/>
+                                                </OnPlatform>
+                                            </Label.FontSize>
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="UWP" Value="Segoe UI Semibold"/>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                    <Label Grid.Column="1" Grid.Row="1" Text="{Binding Info}" Opacity="0.5">
+                                            <Label.FontSize>
+                                                <OnPlatform x:TypeArguments="x:Double">
+                                                    <On Platform="Android" Value="14"/>
+                                                    <On Platform="iOS" Value="14"/>
+                                                    <On Platform="UWP" Value="15"/>
+                                                </OnPlatform>
+                                            </Label.FontSize>
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="UWP" Value="Segoe UI Semibold"/>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                    </Grid>
+                                </Grid>
+                            </telerikListView:ListViewTemplateCell.View>
+                        </telerikListView:ListViewTemplateCell>
+                    </DataTemplate>
+                </telerikDataControls:RadListView.ItemTemplate>
+                <telerikDataControls:RadListView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="&#x25B8;" Margin="8, 12, 0, 6" TextColor="DarkGray" FontSize="Medium">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding IsExpanded}" Value="True">
+                                        <Setter Property="Text" Value="&#x25BE;" />
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                            <Label Margin="0, 12, 0, 6" Text="{Binding }" Grid.Column="1" TextColor="DarkGray" FontSize="Medium" HorizontalOptions="Start" />
+                        </Grid>
+                    </DataTemplate>
+                </telerikDataControls:RadListView.GroupHeaderTemplate>
+            </telerikDataControls:RadListView>
+
+
+    </ContentPage.Content>
+
+
+</ContentPage>
